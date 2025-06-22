@@ -20,7 +20,7 @@ form{
     border-radius: 6px;
     box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
-
+@media(min-width:){
 main{
     flex-direction: row;
     align-items: flex-start;
@@ -36,6 +36,72 @@ main{
     flex: 2;
 }
 }
-#
+#post-list div{
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
 
+#post-list div:hover {
+    background-color:#f0f8ff ;
+}
+#post-details p {
+    margin: 10px 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+input[type="text"],
+input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
 
+div{
+    min-height: 100px;
+}
+
+button{
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #2980b9;
+}
+
+#delete-btn{
+    background-color: #e74c3c;
+}
+
+#delete-btn:hover{
+    background-color: #c0392b;
+}
+
+#cancel-edit {
+    background-color: #aaa;
+}
+
+#cancel-edit:hover {
+    background-color: #888;
+}
+
+.hidden {
+    display: none;
+}
+.editable-content{
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 100px;
+    background-color: #fff;
+    border-radius: 4px;
+}

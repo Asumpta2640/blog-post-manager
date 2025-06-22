@@ -1,0 +1,22 @@
+{
+  "posts"[
+    {
+        "id":1
+        "title":"Welcome to the Blog!",
+        "author":"Admin",
+        "content":"This is the very first post in the blog.Feel free to add more!"
+    },
+    {
+        "id":2,
+        "title":"How to Use Flexbox",
+        "author":"Jane Doe",
+        "content":"Flexbox is a layout model that makes it easier to design responsive web pages..."
+    },
+    {
+        "id":3,
+        "title":"Top 5 JavaScript Tips",
+        "author":"John Swith",
+        "content":"Here are 5 useful JavaScript tips:use === instead of ==, always declare variables..."
+    }
+]
+}

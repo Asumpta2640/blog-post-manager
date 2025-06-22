@@ -1,0 +1,41 @@
+body{
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1,h2{
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#post-list-section,
+#post-details-section,
+form{
+    background-color: antiquewhite;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+main{
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#post-list-section,
+#post-details-section{
+    flex: 1;
+    margin-right: 10px;
+}
+
+#post-details-section{
+    flex: 2;
+}
+}
+#
+
+

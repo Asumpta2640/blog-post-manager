@@ -1,0 +1,141 @@
+const BASE_URL = 'http://localhost:3000/posts';
+
+document.addEventListener('DOMContentLoaded',main);
+
+function main() {
+    displayPosts();
+    addNewPostListener();
+    addEditFormListeners();
+}
+
+function displayPosts(){
+    fetch(BASE_URL)
+    .then(res => res.json())
+    .then(posts => {
+        const postList = document.getElementById('post-list');
+        postList.innerHTML = '';
+
+        posts.forEach(post =>{
+            const postItem = document.createElement('div');
+            postItem.textContent = post.title;
+            postItem.classList.add('post-item');
+            postItem.dataset.id = post.id;
+
+            postItem.addEventListener('click', () => handlepostClick(post.id))
+            postList.appendChild(postItem);
+        });
+        if (post.length >0){
+            handlepostClick(posts[0].id);
+        }
+    });
+}
+
+function handlepostClick(id){
+    fetch(`${BASE_URL}/${id}`)
+      .then(res => res.json())
+      .then(post => {
+        const postDetail = document.getElementById('post-detail');
+        postDetail.innerHTML=`
+        <h3>${post.title}</h3>
+        <p><strong>Author:</strong> ${post.author}</p>
+        <p>${post.content}</p>
+        <button id="edit-btn">Edit</button>
+        <button id="delete-btn">Delete</button>
+        `;
+
+        postDetail.dataset.id = post.id;
+
+        document.getElementById('edit-btn').addEventListener('click',() => showEditForm(post));
+        document.getElementById('delete-btn').addEventListener('click',() => deletePost(post.id));
+
+      });
+}
+
+function addNewPostListener(){
+    const form = document.getElementById('new-post-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        const newpost = {
+            title:form.title.value,
+            author:form.author.value,
+            content:form.content.value
+        };
+
+        fetch(BASE_URL,{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(newPost)
+        })
+        .then(res => res.json())
+        .then(post =>{
+            form.reset ();
+            appendPostToList(post);
+            handlepostClick(post.id);
+        });
+    });
+}
+function appendPostToList(post){
+    const postList = document.getElementById('post-list');
+    const postItem = document.createElement('div');
+    postItem.textContent = post.title;
+    postItem.classList.add('post-item');
+    postItem.dataset.id = post.id;
+    postItem.addEventListener('click', () =>handlepostClick(post.id));
+    postList.appendChild(postItem);
+}
+
+function showEditForm(post){
+    const form = document.getElementById('edit-post-form');
+    form.classList.remove('hidden');
+    document.getElementById('edit-title').value = post.title;
+    document.getElementById('edit-content').value = post.content;
+    form.dataset.id = post.id;
+}
+function addEditFormListeners(){
+    const form =document.getElementById('edit-post-form');
+    const cancelBtn = document.getElementById('cancel-edit');
+
+    if(!form) return;
+
+    form.addEventListener('submit',(e) =>{
+        e.preventDefault();
+
+        const updatedPost ={
+            title:document.getElementById('edit-title').value,
+            content:document.getElementById('edit-content').value
+        };
+
+        const id = form.dataset.id;
+
+        fetch('${BASE_URL}/${id}', {
+            method:'PATCH',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(updatedPost)
+        })
+        .then(res => res.json())
+        .then(update=>{
+            form.classList.add('hidden');
+            displayPosts();
+            handlepostClick(id);
+        });
+    });
+
+    cancelBtn.addEventListener('click',()=> {
+        form.classList.add('hidden');
+    });
+}
+
+function deletePost(id){
+    fetch(`${BASE_URL}/${id}`, {method:'DELETE'})
+    .then(() =>{
+        displayPosts();
+        document.getElementById('post-detail').innerHTML= '<p>Select a post to view its content.</p>';
+    });
+}
+                
+    
+            
+        
+    

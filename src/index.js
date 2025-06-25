@@ -1,14 +1,4 @@
-const BASE_URL = 'http://localhost:3000/posts';
-
-document.addEventListener('DOMContentLoaded',main);
-
-function main() {
-    displayPosts();
-    addNewPostListener();
-    addEditFormListeners();
-}
-
-function displayPosts(){
+  function displayPosts(){
     fetch(BASE_URL)
     .then(res => res.json())
     .then(posts => {
@@ -30,38 +20,23 @@ function displayPosts(){
     });
 }
 
-function handlepostClick(id){
-    fetch(`${BASE_URL}/${id}`)
-      .then(res => res.json())
-      .then(post => {
-        const postDetail = document.getElementById('post-detail');
-        postDetail.innerHTML=`
-        <h3>${post.title}</h3>
-        <p><strong>Author:</strong> ${post.author}</p>
-        <p>${post.content}</p>
-        <button id="edit-btn">Edit</button>
-        <button id="delete-btn">Delete</button>
-        `;
-
-        postDetail.dataset.id = post.id;
-
-        document.getElementById('edit-btn').addEventListener('click',() => showEditForm(post));
-        document.getElementById('delete-btn').addEventListener('click',() => deletePost(post.id));
-
-      });
+function addNewPostListener(){
+    const form = document.getElementById('edit-post-form');
+    const cancelBtn = document.getElementById('cancel-edit');
+    
 }
 
-function addNewPostListener(){
-    const form = document.getElementById('new-post-form');
     if (!form) return;
 
     form.addEventListener('submit', (e) =>{
         e.preventDefault();
-        const newpost = {
-            title:form.title.value,
-            author:form.author.value,
-            content:form.content.value
+        
+        const updatedPost = {
+            title:document.getElementById('edit-title').value,
+            content:document.getElementById('edit-content').value
+            
         };
+        const id = form.dataset.id;
 
         fetch(BASE_URL,{
             method:'POST',

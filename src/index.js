@@ -1,6 +1,5 @@
-const BASE_URL = 'https://jsonplaceholder.typicode.com/posts';
+const BASE_URL = 'https://localhost:3000/posts';
 
-// Fetch and display all posts
 function displayPosts() {
     fetch(BASE_URL)
         .then(res => res.json())
@@ -27,7 +26,6 @@ function displayPosts() {
         });
 }
 
-// Handle clicking on a post to view its details
 function handlePostClick(id) {
     fetch(`${BASE_URL}/${id}`)
         .then(res => res.json())
@@ -48,7 +46,6 @@ function handlePostClick(id) {
         });
 }
 
-// Show the edit form with the post's data
 function showEditForm(post) {
     const form = document.getElementById('edit-post-form');
     form.classList.remove('hidden');
@@ -58,7 +55,6 @@ function showEditForm(post) {
     form.dataset.id = post.id;
 }
 
-// Cancel edit
 function addEditFormListeners() {
     const cancelBtn = document.getElementById('cancel-edit');
     const form = document.getElementById('edit-post-form');

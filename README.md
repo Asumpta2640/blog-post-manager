@@ -64,7 +64,7 @@ The main goals are:
  ```bash
  json-server --watch db.json
 
-4** Start the live Server for HTML **
+4** Start the live Server with HTML **
  -Using the VS Code's Live Server 
 
 This project was developed by Jelagat Asumpta email:sugutasumpta@gmail.com

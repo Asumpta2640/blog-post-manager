@@ -1,0 +1,227 @@
+body{
+    background-color: #adb2efc6; 
+    margin: 0; 
+    padding: 20px; 
+}
+.blog-container{
+    font-family: Arial, sans-serif; 
+    max-width: 800px; 
+    margin-left: auto; 
+    padding: 50px; 
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401); 
+}.blog-container h1{
+    font-size:30px;
+    color:darkgreen; 
+    text-align: center; 
+    margin-bottom: 2rem; 
+}
+.blog-meta{
+    font-size: 14px; 
+    color: #666; 
+    text-align: center; 
+    margin-bottom: 1.5rem; 
+}
+.blog-container p{
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #333; 
+    margin-bottom: 1.5rem; 
+}
+.blog-container h2{
+    font-size: 24px; 
+    color:darkslateblue; 
+    margin-top: 1.5rem; 
+    margin-bottom: 1rem; 
+}
+.social-share{
+    display:flex;
+    gap: 10px;
+    align-items: center;
+    color: #1e00ff; 
+    padding: 6px 14px;
+    border: 1px solid #1e00ff; 
+    border-radius: 4px;
+    background-color: #f0f4ff;
+    transition:ease 0.3s;
+    display: inline-block; 
+}
+.social-share:hover{
+    background-color: #e0e8ff; 
+    color: #000; 
+    border-color: #000; 
+}
+.comments-section{
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.318); 
+    padding: 20px; 
+    background-color: #f9f9f977; 
+    margin-top: 2rem; 
+}
+.comments-section p{
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #333; 
+    margin-bottom: 1rem; 
+}
+.post-list-container{
+    position: absolute; 
+    background-color: #f0f4ff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401); 
+    display:flex;
+    flex-direction: column; 
+    gap: 20px; 
+    padding: 20px; 
+    top:150px;;
+    left: 50px; 
+    width:700px; 
+    height: 400px; 
+}
+.post-list-container h3 {
+    font-size: 24px;
+    color: darkslateblue; 
+    margin-bottom: 10px; 
+    display: flex;
+    flex-direction: row; 
+    align-items:flex-start; 
+    justify-content:center; 
+}
+#post-list{
+    width:100%; 
+    height: 100%;
+    overflow-y: auto; 
+    padding: 10px; 
+    margin-top: 10px; 
+    position:relative; 
+    top: 15px; 
+}
+.new-post-container{
+    position: absolute; 
+    background-color: #f0f4ff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401);  
+    display:flex;
+    flex-direction: column; 
+    gap: 20px; 
+    padding: 20px; 
+    top:700px;
+    left: 50px; 
+    width:700px; 
+    height: 650px; 
+}
+#new_post_form_heading{
+    font-size: 24px; 
+    color: rgb(139, 61, 114); 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+.new-post-container h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.new-post-container form label {
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: bold;
+    color: #555;
+}
+
+.new-post-container form input[type="text"],
+.new-post-container form textarea {
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+}
+
+.new-post-container form textarea {
+    resize: vertical; 
+    min-height: 100px; 
+}
+
+.button-group {
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-top: 10px;
+}
+
+.new-post-container form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.new-post-container form button.submit-post {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.new-post-container form button.submit-post:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.new-post-container form button.update-post {
+    background-color: #008CBA; 
+    color: white;
+}
+
+.new-post-container form button.update-post:hover {
+    background-color: #007bb5;
+    transform: translateY(-2px);
+}
+
+.new-post-container form button.cancel-post {
+    background-color: #f44336; 
+    color: white;
+}
+
+.new-post-container form button.cancel-post:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+}
+
+.new-post-container form button.delete-post {
+    background-color: #6c757d; 
+    color: white;
+}
+
+.new-post-container form button.delete-post:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 770px) {
+    .top-content-area,
+    .new-post-container {
+        width: 100%; 
+        margin: 0 auto; 
+        padding: 20px;
+    }
+
+    .button-group {
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+}

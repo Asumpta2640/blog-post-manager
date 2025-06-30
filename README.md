@@ -49,6 +49,24 @@ The main goals are:
 -Live Server
 -Visual Studio Code
 
+## Setup Instructions
+
+1**Clone the repository**:
+   ```bash
+   git clone git@github.com:Asumpta2640/blog-post-manager.git
+   cd blog-post-manager
+
+2** install JSON Server**
+  ```bash  
+  npm install -g json-server
+
+3** Start the JSON Server **
+ ```bash
+ json-server --watch db.json
+
+4** Start the live Server for HTML **
+ -Using the VS Code's Live Server 
+
 This project was developed by Jelagat Asumpta email:sugutasumpta@gmail.com
 
 #License

@@ -7,7 +7,7 @@ A simple web application
 
 ---
 
-##How does it work?
+## How does it work?
 -On page load, the app fetches a list of blog post titles from a json-server and display them.
 -When a user clicks on a title,, the full  post details apper on the right.
 -User can:
@@ -17,7 +17,7 @@ A simple web application
 -All data changes are update with the mock API using `fetch() `with GET,POST,PATCH, and DELETE requests.
 -The frontend updates the DOM based on user actions.
 
-##Who are the users?
+## Who are the users?
 
 This app is designed for:
 -Developers learning frontend development with Javascript
@@ -26,7 +26,7 @@ This app is designed for:
 -Anyone wanting to rest or prototype blog features locally
 
 ---
-##What is the goal of this project?
+## What is the goal of this project?
 The main goals are:
 -To build a working fronted app that interacts with an API
 -To practice full functionality using real HTTP methods
@@ -34,8 +34,22 @@ The main goals are:
 -To understand how local json-server can be used in testing
 
 ---
-##What is the benefit for the users?
+## What is the benefit for the users?
 -Users can easily manage a list of blog post without needing a real backend.
 -Its a educating tool to understand how web apps works.
 -It can be used as a template.
 -It encourages modular JavaScript.
+
+## Built With 
+
+-HTML
+-CSS
+-JavaScript
+-JSON Server
+-Live Server
+-Visual Studio Code
+
+This project was developed by Jelagat Asumpta email:sugutasumpta@gmail.com
+
+#License
+This project is licensed under the [MIT License](LICENSE)

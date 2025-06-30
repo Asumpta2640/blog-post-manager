@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "The Art of Starting a New Hobby",
+      "content": "n our busy lives, finding time for ourselves and learning something new can feel like a luxury. Yet, hobbies are vital for well-being, stress reduction, and personal growth. But how do you actually start a new hobby? It's more than just buying supplies or watching a YouTube tutorial; it's about successfully integrating it into your life and developing a consistent practice. This guide will walk you through the universal steps to seamlessly adopt any new hobby, from knitting to coding, gardening to gaming. Get ready to unlock new passions and enrich your life, one small step at a time!",
+      "author": "Author's Name",
+      "image": "..."
+    },
+    {
+      "id": "2",
+      "title": "Mindful Moments: Daily Practices for Peace",
+      "content": "Mindful Moments: Daily Practices for Peace\nIn our fast-paced world, where distractions are constant and stress often feels like a permanent companion, finding moments of peace can seem like an elusive dream. We're constantly bombarded with information, demands, and the relentless pressure to \"do more.\" But what if true tranquility wasn't about escaping reality, but about learning to engage with it differently?\n\nMindfulness is the practice of bringing your attention to the present moment, without judgment. It’s about noticing your thoughts,'feelings', bodily sensations, and the world around you with a calm, accepting awareness. The good news is, you don't need hours of meditation to cultivate this state. Incorporating small, intentional \"mindful moments\" into your daily routine can significantly reduce stress, enhance focus, and bring a profound sense of inner peace.\n\nThis guide explores simple, practical mindfulness exercises you can easily weave into your everyday life, transforming ordinary moments into opportunities for calm and clarity.",
+      "author": "Jane Doe",
+      "image": "..."
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": "1",
+      "author": "Sam Smith",
+      "text": "This is exactly what I needed!"
+    },
+    {
+      "id": "2",
+      "postId": "1",
+      "author": "John Hopkins",
+      "text": "Another great read, well said!"
+    }
+  ]
+}

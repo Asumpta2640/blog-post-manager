@@ -1,7 +1,7 @@
 body{
     background-color: #adb2efc6; 
-    margin: 0; 
-    padding: 20px; 
+    margin: 0; /* Removes default margin */
+    padding: 20px; /* Adds space around the content */
 }
 .blog-container{
     font-family: Arial, sans-serif; 
@@ -11,9 +11,10 @@ body{
     background-color: #fff; 
     border-radius: 8px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401); 
-}.blog-container h1{
+}
+    .blog-container h1{
     font-size:30px;
-    color:darkgreen; 
+    color:darkgreen;
     text-align: center; 
     margin-bottom: 2rem; 
 }
@@ -27,7 +28,7 @@ body{
     font-size: 16px; 
     line-height: 1.6; 
     color: #333; 
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
 }
 .blog-container h2{
     font-size: 24px; 
@@ -48,74 +49,74 @@ body{
     display: inline-block; 
 }
 .social-share:hover{
-    background-color: #e0e8ff; 
-    color: #000; 
-    border-color: #000; 
+    background-color: #e0e8ff; /* Changes background on hover */
+    color: #000; /* Changes text color on hover */
+    border-color: #000; /* Changes border color on hover */
 }
 .comments-section{
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.318); 
-    padding: 20px; 
-    background-color: #f9f9f977; 
-    margin-top: 2rem; 
+    border-radius: 8px; /* Rounded corners for the comments section */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.318); /* Subtle shadow for depth */
+    padding: 20px; /* Adds space inside the comments section */
+    background-color: #f9f9f977; /* Light gray background for the comments section */
+    margin-top: 2rem; /* Adds space above the comments section */
 }
 .comments-section p{
-    font-size: 16px; 
-    line-height: 1.6; 
-    color: #333; 
-    margin-bottom: 1rem; 
+    font-size: 16px; /* Sets a comfortable reading size for comments */
+    line-height: 1.6; /* Increases line height for better readability */
+    color: #333; /* Dark gray text color for contrast */
+    margin-bottom: 1rem; /* Adds space below each comment */
 }
 .post-list-container{
-    position: absolute; 
-    background-color: #f0f4ff; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401); 
+    position: absolute; /* Positions the post list container */
+    background-color: #f0f4ff; /* Light blue background for the post list */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401); /* Subtle shadow for depth */
     display:flex;
-    flex-direction: column; 
-    gap: 20px; 
-    padding: 20px; 
+    flex-direction: column; /* Stacks the posts vertically */
+    gap: 20px; /* Adds space between each post */
+    padding: 20px; /* Adds space around the posts */
     top:150px;;
-    left: 50px; 
-    width:700px; 
-    height: 400px; 
+    left: 50px; /* To start from the top-left */
+    width:700px; /* Sets a fixed width for the post list */
+    height: 400px; /*Sets a fixed height for the post list*/
 }
 .post-list-container h3 {
     font-size: 24px;
-    color: darkslateblue; 
-    margin-bottom: 10px; 
+    color: darkslateblue; /* Dark blue color for post titles */
+    margin-bottom: 10px; /* Adds space below the post title */
     display: flex;
-    flex-direction: row; 
-    align-items:flex-start; 
-    justify-content:center; 
+    flex-direction: row; /* Stacks the post title vertically */
+    align-items:flex-start; /* Aligns the post title */
+    justify-content:center; /*Centers the post title horizontally */
 }
 #post-list{
-    width:100%; 
-    height: 100%;
-    overflow-y: auto; 
-    padding: 10px; 
-    margin-top: 10px; 
-    position:relative; 
-    top: 15px; 
+    width:100%; /* Adjusts the width to fit the content */
+    height: 100%; /* Makes the post list take full height */
+    overflow-y: auto; /* Adds vertical scroll if content overflows */
+    padding: 10px; /* Adds space inside the post list */
+    margin-top: 10px; /* Adds space above the post list */
+    position:relative; /* Fixes the position of the post list */
+    top: 15px; /* Positions the post list from the top */
 }
 .new-post-container{
-    position: absolute; 
-    background-color: #f0f4ff; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401);  
+    position: absolute; /* Positions the post list container */
+    background-color: #f0f4ff; /* Light blue background for the post list */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.401); /* Subtle shadow for depth */
     display:flex;
-    flex-direction: column; 
-    gap: 20px; 
-    padding: 20px; 
+    flex-direction: column; /* Stacks the posts vertically */
+    gap: 20px; /* Adds space between each post */
+    padding: 20px; /* Adds space around the posts */
     top:700px;
-    left: 50px; 
-    width:700px; 
-    height: 650px; 
+    left: 50px; /* To start from the top-left */
+    width:700px; /* Sets a fixed width for the post list */
+    height: 650px; /*Sets a fixed height for the post list*/
 }
 #new_post_form_heading{
-    font-size: 24px; 
-    color: rgb(139, 61, 114); 
-    margin-bottom: 20px; 
-    text-align: center; 
+    font-size: 24px; /* Sets a larger size for the new post form heading */
+    color: rgb(139, 61, 114); /* Dark blue color for the new post form heading */
+    margin-bottom: 20px; /* Adds space below the new post form heading */
+    text-align: center; /* Centers the new post form heading */
 }
 .new-post-container h2 {
     color: #333;
@@ -125,33 +126,33 @@ body{
 }
 
 .new-post-container form label {
-    display: block; 
-    margin-bottom: 8px; 
+    display: block; /* Makes labels appear on their own line */
+    margin-bottom: 8px; /* Space below label */
     font-weight: bold;
     color: #555;
 }
 
 .new-post-container form input[type="text"],
 .new-post-container form textarea {
-    width: 100%; 
+    width: 100%; /* Makes input and textarea fill the container */
     padding: 12px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* Space below input/textarea */
     border: 1px solid #ccc;
-    border-radius: 8px; 
-    box-sizing: border-box; 
+    border-radius: 8px; /* Rounded corners for input fields */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
     font-size: 1rem;
 }
 
 .new-post-container form textarea {
-    resize: vertical; 
-    min-height: 100px; 
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for textarea */
 }
 
 .button-group {
-    display: flex; 
-    gap: 10px; 
-    justify-content: center; 
-    flex-wrap: wrap; 
+    display: flex; /* Use flexbox to align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Align buttons to the right */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
     margin-top: 10px;
 }
 
@@ -163,11 +164,12 @@ body{
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for buttons */
 }
 
+/* Specific button styles */
 .new-post-container form button.submit-post {
-    background-color: #4CAF50; 
+    background-color: #4CAF50; /* Green */
     color: white;
 }
 
@@ -177,7 +179,7 @@ body{
 }
 
 .new-post-container form button.update-post {
-    background-color: #008CBA; 
+    background-color: #008CBA; /* Blue */
     color: white;
 }
 
@@ -187,7 +189,7 @@ body{
 }
 
 .new-post-container form button.cancel-post {
-    background-color: #f44336; 
+    background-color: #f44336; /* Red */
     color: white;
 }
 
@@ -197,7 +199,7 @@ body{
 }
 
 .new-post-container form button.delete-post {
-    background-color: #6c757d; 
+    background-color: #6c757d; /* Grey */
     color: white;
 }
 
@@ -206,6 +208,7 @@ body{
     transform: translateY(-2px);
 }
 
+/* Responsive adjustments */
 @media (max-width: 770px) {
     .top-content-area,
     .new-post-container {
@@ -221,7 +224,7 @@ body{
 
 @media (max-width: 480px) {
     .button-group button {
-        width: 100%; 
-        margin-bottom: 10px; 
+        width: 100%;
+        margin-bottom: 10px; /
     }
 }
